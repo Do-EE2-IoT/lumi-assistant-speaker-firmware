@@ -1,7 +1,7 @@
 {
   "product": "lumi-assistant-speaker",
-  "version": "0.1.0",
-  "release_url": "https://raw.githubusercontent.com/Do-EE2-IoT/lumi-assistant-speaker-firmware/main/releases/0.1.0/ota.rbl",
+  "version": "0.1.1",
+  "release_url": "https://raw.githubusercontent.com/Do-EE2-IoT/lumi-assistant-speaker-firmware/main/releases/0.1.1/ota.rbl",
   "size": 3342336,
-  "sha256": "21f4868162ba3b388e30b40899882660c60db6714fb86088959563729f44b291"
+  "sha256": "ab9a2ac16ee4139e42049746fafd56794fb0587e0d3f2e169c451cee863871c7"
 }
