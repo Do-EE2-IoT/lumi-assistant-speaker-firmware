@@ -1,5 +1,15 @@
 # Release 1.0.2
 
+## Current state: intentionally corrupted OTA test artifact
+
+The current `ota.rbl` is a negative-test fixture, not the original valid release. One bit at file offset `0x100` was flipped. The file length is unchanged, but its full-file SHA-256 and payload CRC32 no longer match the original expected values. `release.json`, `ota.rbl.sha256`, and the production manifest intentionally retain the **original expected hash** so the device should reject this download before setting pending or booting a candidate.
+
+The manifest must point to the immutable commit containing this corrupted artifact for the test to exercise it. Test with a speaker running a lower version such as 1.0.1; a speaker already running 1.0.2 should skip the download due to equal versions.
+
+The original valid artifact remains available at commit `2733f0b2f38e9606a64b78a78b009e3445fc7629`, path `releases/1.0.2/ota.rbl`. To restore normal OTA, restore that file and point the manifest back to that commit; the expected size/hash already describe the original file.
+
+The original-artifact checks and observations below describe the **valid file before corruption**, not the current negative-test fixture.
+
 ## Artifact and provenance
 
 - `ota.rbl` was copied byte-for-byte from the supplied local `D:\AI\speakerOta\ota.rbl`.
