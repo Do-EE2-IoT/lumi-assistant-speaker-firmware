@@ -1,0 +1,10 @@
+{
+  "release_id": "lumi-assistant-speaker-1.0.1",
+  "product": "lumi-assistant-speaker",
+  "version": "1.0.1",
+  "source_commit": "30d362f1bbda81932f302deacc400737bb9a7ffe",
+  "source_dirty": true,
+  "filename": "ota.rbl",
+  "size": 3538944,
+  "sha256": "74605ccf3248843da79814b2f7162c5fa4b64f72c278159848768bd7456e57bb"
+}
